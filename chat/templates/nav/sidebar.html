@@ -1,0 +1,16 @@
+{% load static %}
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    
+    <ul class="nav">
+        <li class="nav-item nav-category mt-5">Chat users</li>
+        {% for chatlist in chatlists %}
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'room' chatlist.threadname %}">
+                <i class="menu-icon typcn typcn-coffee"></i>
+                <span class="menu-title">{{chatlist.threadname}}</span>
+            </a>
+        </li>
+        {% endfor %}
+        <br /><br />
+    </ul>
+</nav>

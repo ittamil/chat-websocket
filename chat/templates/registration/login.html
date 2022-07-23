@@ -1,0 +1,58 @@
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css"
+        integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG" crossorigin="anonymous">
+    <title>Login</title>
+    <style>
+        @import url("https://use.typekit.net/bza3vcv.css");
+
+        * {
+            font-family: "proxima-nova";
+            
+        }
+        body{
+            background-color: #1cf03f0c;
+        }
+
+        .bg-green {
+            background-color: #1cf040;
+            color: black;
+        }
+
+        .bg-green:hover {
+            opacity: 0.9;
+        }
+
+        .card {
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <div class="card p-3 mt-5 shadow-lg">
+                    <h4>Login</h4>
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{form | crispy}}
+                        <input type="submit" class="btn btn-primary btn-block" value="Login">
+                    </form>
+                    <a href="{% url 'register' %}" class="btn bg-green mt-3">Register</a>
+                </div>
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+    </div>
+</body>
+
+</html>

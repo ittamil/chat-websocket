@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+
+    {% include 'css.html' %}
+</head>
+
+<body>
+    <div class="container-scroller">
+        {% include 'nav/topnav.html' %}
+        <div class="container-fluid page-body-wrapper">
+            {% include 'nav/sidebar.html' %}
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <img src="{% static 'images/chat.svg' %}" alt="" class="align-items-center img-fluid">
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                </div>
+                <!-- main-panel ends -->
+            </div>
+        </div>
+        {% include 'js.html' %}
+
+</body>
+</html>

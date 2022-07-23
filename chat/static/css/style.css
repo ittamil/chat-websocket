@@ -1,0 +1,51 @@
+@import url("https://use.typekit.net/bza3vcv.css");
+
+* {
+    font-family:"proxima-nova";
+}
+
+.sidebar,
+.main-panel {
+  height: 20rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.code-snippet {
+  padding: 2px;
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+}
+
+.code-snippet p {
+  color: white;
+}
+
+.left-border {
+  border-left-style: solid;
+  border-left-color: black;
+  padding: 20px;
+}
+
+.params-highlight {
+  color: red;
+}
+
+.code-snippet-text {
+  color: white
+}
+
+.glow-success {
+    color: rgb(255, 255, 255);
+    box-shadow: 0 5px 15px rgba(125, 182, 92, 0.4);
+  }
+  
+  .glow-success-btn:hover {
+    color: rgb(255, 255, 255);
+    box-shadow: 0 5px 15px rgba(125, 182, 92, 0.4);
+  }
+
+h5{
+  font-weight: bolder;
+}
