@@ -65,7 +65,7 @@ ASGI_APPLICATION = "eping.asgi.application"
 CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
-        'LOCATION':'redis-11533.c51.ap-southeast-2-1.ec2.cloud.redislabs.com:11533',
+        'LOCATION':'<url>'
         'CONFIG': {
         'hosts': [('127.0.0.1', 6379)],
         },
