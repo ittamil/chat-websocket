@@ -100,15 +100,17 @@ USE_L10N = True
 USE_TZ = True
 
 
-
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
-MEDIA_ROOT =  os.path.join(BASE_DIR, 'media') 
 MEDIA_URL = '/media/'
 
-
+if DEBUG:
+    STATIC_ROOT = os.path.join(BASE_DIR,'static')
+    MEDIA_ROOT =  os.path.join(BASE_DIR, 'media') 
+else:
+    STATIC_ROOT = '/var/www/server/static/'
+    MEDIA_ROOT =  '/var/www/server/media/' 
+    
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = "login"
