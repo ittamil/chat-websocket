@@ -103,12 +103,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
-if DEBUG:
-    STATIC_ROOT = os.path.join(BASE_DIR,'static')
-    MEDIA_ROOT =  os.path.join(BASE_DIR, 'media') 
-else:
-    STATIC_ROOT = '/var/www/server/static/'
-    MEDIA_ROOT =  '/var/www/server/media/' 
+
+STATIC_ROOT = '/var/www/server/static/'
+MEDIA_ROOT =  '/var/www/server/media/' 
     
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
